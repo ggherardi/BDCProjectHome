@@ -2,8 +2,10 @@
 $(window).load(function() {
   $(".btn-nav").on("click tap", function() {
     $(".nav-content").toggleClass("showNav hideNav").removeClass("hidden");
-    $(this).toggleClass("animated");
-    var h2Text = $(this).text();
+    $(".btn-nav").toggleClass("animated");
+    var h2 = $("h2.btn-nav");
+    h2.toggle();
+    var h2Text = $(this).children()[0].text();
     if(h2Text == "Chiudi") {
       $(this).text("Inizia qui");
     } else {
@@ -24,16 +26,16 @@ var shuffleme = (function( $ ) {
   init = function() {
 
     // None of these need to be executed synchronously
-    setTimeout(function() {
-      listen();
-      setupFilters();
-    }, 100);
+    // setTimeout(function() {
+    //   listen();
+    //   setupFilters();
+    // }, 100);
 
     // instantiate the plugin
-    $grid.shuffle({
-      itemSelector: '[class*="col-"]',
-      sizer: $sizer    
-    });
+    // $grid.shuffle({
+    //   itemSelector: '[class*="col-"]',
+    //   sizer: $sizer    
+    // });
   },
 
       
