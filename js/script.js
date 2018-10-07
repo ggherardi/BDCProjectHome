@@ -5,12 +5,6 @@ $(window).load(function() {
     $(".btn-nav").toggleClass("animated");
     var h2 = $("h2.btn-nav");
     h2.toggle();
-    var h2Text = $(this).children()[0].text();
-    if(h2Text == "Chiudi") {
-      $(this).text("Inizia qui");
-    } else {
-      $(this).text("Chiudi");
-    }
   });
 });
 
